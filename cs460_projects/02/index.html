@@ -80,7 +80,7 @@
         [0,0,0,0,0,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]];
 
         // an array to store the cubes that change to the Super Saiyan
-        let superSaiyan = [], count=0;
+        var superSaiyan = [], count=0;
 
 
         // this one to see the image with the gap between cubes.pixels
@@ -102,16 +102,29 @@
             }
             r.add(c);
           }
-        }
+        }        
+
+        // set the art further
+        //r.camera.position = [1, 1, 3000]; //x,y,z axis
+
+        var cam=0;
+        var cameraEffect = setInterval(function() {
+            if (cam<2500) {
+                cam+=1;
+                r.camera.position = [1, 0, cam];
+            }
+            else {
+                clearInterval(cameraEffect);
+            }
+
+        }, 10);
 
         // rotate animation
         r.onRender = function() {
           r.camera.rotate([3, 0]); //by x-axis and/or y-axis
         };
 
-        // set the art further
-        r.camera.position = [1, 1, 3000]; //x,y,z axis
-
+        // This one for the Bonus question 2:
         // effect by changing the color 
         setInterval(function() {
           // your code
