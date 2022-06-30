@@ -109,7 +109,7 @@
 		<p>Copyright &copy
 			<script type="text/javascript">document.write(new Date().getFullYear());</script> <a
 				href="/index.html">Tung Duong</a></p>
-		<div style="position: absolute; right: 10px; bottom: 10px; opacity:.5; width: 50px; height: 50px; display: none;" id="backtotop" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='.5'">
+		<div style="position: absolute; right: 10px; bottom: 10px; opacity:.5; width: 50px; height: 50px;" id="backtotop" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='.5'">
 			<a href="#TungDuong"></a>
 			<img src="/assets/images/svg/back-to-top-icon.jpg">
 </div>
@@ -119,7 +119,7 @@
 		var backtotop = document.getElementById("backtotop");
 		window.onscroll = function() {
 		  if (this.scrollY > 30) {
-		  	backtotop.style.display = "block";
+		  	backtotop.style.display = "flex";
 		  } else {
 		    backtotop.style.display = "none";		  
 		  }
