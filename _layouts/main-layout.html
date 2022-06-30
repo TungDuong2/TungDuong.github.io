@@ -57,6 +57,16 @@
 </head>
 
 <body>
+	<script type="text/javascript">
+		var backtotop = document.getElementById("backtotop");
+		window.onscroll = function() {
+		  if (this.scrollY > 30) {
+		  	backtotop.style.display = "block";
+		  } else {
+		    backtotop.style.display = "none";		  
+		  }
+		}
+	</script>
 	<div class="container page-content">
 		<div class="header page-header">
 			<div class="row">
@@ -109,7 +119,10 @@
 		<p>Copyright &copy
 			<script type="text/javascript">document.write(new Date().getFullYear());</script> <a
 				href="/index.html">Tung Duong</a></p>
-		<button href="#TungDuong" style="right: 5pxj">TOP</button>
+		<div style="position: absolute; right: 10; bottom: 10; opacity:.5;" id="backtotop" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='.5'">
+			<a href="#TungDuong"></a>
+			<img src="/assets/images/svg/back-to-top-icon.jpg">
+</div>
 	</footer>
 </body>
 
