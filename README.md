@@ -1,2 +1,2 @@
-# https://tung-duong.com
+# https://TungDuong.github.io
 A constantly maintained personal website that serves as a directory of my resume, personal projects, as well as other relevant documents.
